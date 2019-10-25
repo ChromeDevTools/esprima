@@ -96,8 +96,6 @@
     "compile": "tsc -p src/ && webpack && node tools/fixupbundle.js",
     "test": "npm run compile && npm run all-tests && npm run static-analysis && npm run dynamic-analysis",
     "prepublish": "npm run compile",
-    "postinstall": "npm run compile",
-    "prepare": "npm i",
     "profile": "node --prof test/profile.js && mv isolate*.log v8.log && node-tick-processor",
     "benchmark-parser": "node -expose_gc test/benchmark-parser.js",
     "benchmark-tokenizer": "node --expose_gc test/benchmark-tokenizer.js",
